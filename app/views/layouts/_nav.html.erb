@@ -1,0 +1,28 @@
+<div class="hide-on-med-and-down indigo lighten-1">
+  <div class="container">
+    <h6 class="left white-text text-lighten-4"><i class="fa fa-envelope"></i> ventas@cajce.com.mx</h6>
+    <h6 class="right white-text text-lighten-4"><i class="fa fa-phone"></i> (55) 49 97 14 76 y (55) 49 97 04 37 </h6>
+  </div>
+</div>
+<div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper">
+      <%= link_to image_tag("logo.png", :alt=> "logo", :class=> "brand-logo logo-container responsive-img", :id=> "logo-container"), root_path %>
+      <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to "Acerca de Nosotros", root_path, :class=> "indigo-text darken-1" %></li>
+        <li><%= link_to "Servicios", services_path, :class=> "indigo-text darken-1" %></li>
+        <li><%= link_to "Obras", companies_path, :class=> "indigo-text darken-1" %></li>
+        <li><%= link_to "Galería", galleries_path, :class=> "indigo-text darken-1" %></li>
+        <li><%= link_to "Contacto", root_path, :class=> "indigo-text darken-1" %></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to "Acerca de Nosotros", root_path %></li>
+        <li><%= link_to "Servicios", services_path %></li>
+        <li><%= link_to "Obras", companies_path %></li>
+        <li><%= link_to "Galería", galleries_path %></li>
+        <li><%= link_to "Contacto", root_path %></li>
+      </ul>
+    </div>
+  </nav>
+</div>
