@@ -12,14 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Servicio" %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+
+
+  <div class="file-field input-field">
+    <div class="waves-effect waves-light btn indigo">
+      <span>Cargar Foto</span>
+      <input type="file">
+    </div>
+    <div class="file-path-wrapper">
+      <%= f.text_field :image, :class=>"file-path validate" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+
+  <div class="actions center">
+    <%= f.submit "Actualizar", :class=>"btn-large indigo" %>
   </div>
 <% end %>

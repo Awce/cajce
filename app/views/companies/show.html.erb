@@ -1,34 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
+<div class="row">
+  <div class="col s12 m12 l12">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title blue-text text-darken-2"><%= @company.name %></span>
+        <h6><%= @company.work %></h6>
+        <strong>Progreso:</strong>
+        <h6><%= @company.progress %>%</h6>
+        <p>
+          <strong>Fecha de inicio:</strong>
+          <%= @company.dateini %>
+        </p>
 
-<p>
-  <strong>Work:</strong>
-  <%= @company.work %>
-</p>
+        <p>
+          <strong>Fecha de fin:</strong>
+          <%= @company.dateend %>
+        </p>
 
-<p>
-  <strong>Progress:</strong>
-  <%= @company.progress %>
-</p>
+        <p>
+          <strong>Servicio:</strong>
+          <%= @company.service %>
+        </p>
 
-<p>
-  <strong>Dateini:</strong>
-  <%= @company.dateini %>
-</p>
-
-<p>
-  <strong>Dateend:</strong>
-  <%= @company.dateend %>
-</p>
-
-<p>
-  <strong>Service:</strong>
-  <%= @company.service %>
-</p>
-
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+      </div>
+      <div class="card-action center">
+        <%= link_to 'Editar', edit_company_path(@company), :class=>"blue-text" %>
+        <%= link_to 'Regresar', companies_path, :class=>"blue-text" %>
+      </div>
+    </div>
+  </div>
+</div>

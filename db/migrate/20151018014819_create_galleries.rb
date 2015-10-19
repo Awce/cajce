@@ -1,7 +1,7 @@
 class CreateGalleries < ActiveRecord::Migration
   def change
     create_table :galleries do |t|
-      t.binary :image
+      t.string :image
       t.text :description
       t.references :company, index: true, foreign_key: true
 

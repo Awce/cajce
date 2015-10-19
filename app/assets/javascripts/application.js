@@ -26,6 +26,8 @@
       selectMonths: true,
       selectYears: 20
     });
+    $('.materialboxed').materialbox();
+  
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

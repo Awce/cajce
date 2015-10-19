@@ -1,29 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h5>Lista de Servicios</h5>
+<div class="row">
+  <div class="col s12 l12 center"><h5>Lista de Servicios</h5></div>
+  <div class="col s6 l12 center"><%= link_to '+', new_service_path, :class=>"btn-floating btn-large waves-effect waves-light indigo" %></div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @services.each do |service| %>
-      <tr>
-        <td><%= service.name %></td>
-        <td><%= service.image %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Service', new_service_path %>
+<div class="row">
+  <% @services.each do |service| %>
+  <div class="col s12 m12 l3 center">
+    <div class="card darken-1">
+      <div class="card-content">
+        <span class="card-title"><%= image_tag service.image, :class=> "circle" %></span>
+        <h6><%= service.name %></h6>
+      </div>
+      <div class="card-action">
+        <%= link_to 'Ver', service, :class=>"blue-text" %>
+        <%= link_to 'Editar', edit_service_path(service), :class=>"blue-text" %>
+        <%= link_to 'Eliminar', service, method: :delete, data: { confirm: '¿Estas seguro?' }, :class=>"blue-text" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

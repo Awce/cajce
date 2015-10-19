@@ -12,30 +12,30 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Empresa" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :work %><br>
+    <%= f.label "Obra" %><br>
     <%= f.text_field :work %>
   </div>
   <div class="field">
-    <%= f.label :progress %><br>
+    <%= f.label "Progreso" %><br>
     <%= f.number_field :progress %>
   </div>
   <div class="field">
-    <%= f.label :dateini %><br>
+    <%= f.label "Fecha inicial" %><br>
     <%= f.date_field :dateini, :class=> "datepicker" %>
   </div>
   <div class="field">
-    <%= f.label :dateend %><br>
+    <%= f.label "Fecha final" %><br>
     <%= f.date_field :dateend, :class=> "datepicker" %>
   </div>
   <div class="field">
-    <%= f.label :service_id %><br>
+    <%= f.label "Servicio" %><br>
     <%= f.text_field :service_id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions center">
+    <%= f.submit "Actualizar",:class=>"btn-large indigo" %>
   </div>
 <% end %>

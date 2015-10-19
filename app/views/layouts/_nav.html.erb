@@ -10,14 +10,14 @@
       <%= link_to image_tag("logo.png", :alt=> "logo", :class=> "brand-logo logo-container responsive-img", :id=> "logo-container"), root_path %>
       <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><%= link_to "Acerca de Nosotros", root_path, :class=> "indigo-text darken-1" %></li>
+        <li><%= link_to "Acerca de Nosotros", root_url, :class=> "indigo-text darken-1" %></li>
         <li><%= link_to "Servicios", services_path, :class=> "indigo-text darken-1" %></li>
         <li><%= link_to "Obras", companies_path, :class=> "indigo-text darken-1" %></li>
         <li><%= link_to "Galería", galleries_path, :class=> "indigo-text darken-1" %></li>
         <li><%= link_to "Contacto", root_path, :class=> "indigo-text darken-1" %></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><%= link_to "Acerca de Nosotros", root_path %></li>
+        <li><%= link_to "Acerca de Nosotros", root_url %></li>
         <li><%= link_to "Servicios", services_path %></li>
         <li><%= link_to "Obras", companies_path %></li>
         <li><%= link_to "Galería", galleries_path %></li>

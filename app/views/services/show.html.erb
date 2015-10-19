@@ -1,14 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @service.name %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @service.image %>
-</p>
-
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+<div class="row">
+  <div class="col m12">
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <%= image_tag @service.image %>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%= @service.name %><i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4 center"><%= image_tag @service.image, :class=> "circle" %><i class="material-icons right">close</i></span>
+        <div class="center-align">
+          <%= @service.name %>
+        </div>
+        <br>
+        <div class="card-action center">
+          <%= link_to 'Editar', edit_service_path(@service), :class=>"blue-text" %>
+          <%= link_to 'Regresar', services_path, :class=>"blue-text" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
